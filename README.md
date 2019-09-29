@@ -8,4 +8,4 @@ W konsoli GIT Bash w folderze projektu gdy mamy błąd:
 
 3) git config --global user.email "kuba4live@gmail.com"
 
-git config --global user.name "ProgrammerGdansk2019"
+git config --global user.name "programmerGdansk2019"
