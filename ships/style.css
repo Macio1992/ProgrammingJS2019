@@ -17,3 +17,17 @@
   border: 1px solid;
   box-sizing: border-box;
 }
+
+.ship {
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.ship-red {
+  background-image: url("./img/icons8-cargo-ship-90red.png");
+}
+
+.ship-black {
+  background-image: url("./img/icons8-cargo-ship-90.png");
+}
