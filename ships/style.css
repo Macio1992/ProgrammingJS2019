@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 
-.ship {
+.icon {
   background-size: 50% 50%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -30,4 +30,8 @@
 
 .ship-black {
   background-image: url("./img/icons8-cargo-ship-90.png");
+}
+
+.skull {
+  background-image: url("./img/catrina.png");
 }
