@@ -19,7 +19,6 @@
 }
 
 .ship {
-  background-image: url("./img/icons8-cargo-ship-90.png");
   background-size: 50% 50%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -27,7 +26,8 @@
 
 .ship-red {
   background-image: url("./img/icons8-cargo-ship-90red.png");
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+}
+
+.ship-black {
+  background-image: url("./img/icons8-cargo-ship-90.png");
 }
