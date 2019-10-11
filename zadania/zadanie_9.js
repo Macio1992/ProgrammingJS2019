@@ -11,5 +11,3 @@ function findNumbers(array) {
 
   return foundNumbers;
 }
-
-console.log(findNumbers([4, 8, 11, 24, 100]));
