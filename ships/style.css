@@ -24,11 +24,11 @@
   background-position: 50% 50%;
 }
 
-.ship-red {
+.hitShip {
   background-image: url("./img/icons8-cargo-ship-90red.png");
 }
 
-.ship-black {
+.ship {
   background-image: url("./img/icons8-cargo-ship-90.png");
 }
 

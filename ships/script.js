@@ -1,15 +1,15 @@
 function hit(event) {
   // if (event.target.classList.contains("icon")) {
   //   console.log("trafiony");
-  //   event.target.classList.remove("ship-black");
-  //   event.target.classList.add("ship-red");
+  //   event.target.classList.remove("ship");
+  //   event.target.classList.add("hitShip");
   // } else {
   //   console.log("nie trafiony");
   //   event.target.classList.add("skull");
   //   event.target.classList.add("icon");
   // }
 
-  const cellShips = document.getElementsByClassName("ship-black");
+  const cellShips = document.getElementsByClassName("ship");
   // console.log("cellShips", cellShips);
 
   let fields = [];
@@ -22,4 +22,3 @@ function hit(event) {
   // const hitCell = event.target;
   // console.log(hitCell.classList[0]);
 }
-
