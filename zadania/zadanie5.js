@@ -3,8 +3,3 @@ function getRandomDigit(array) {
   console.log('randomIndex ', randomDigitIndex);
   return array[randomDigitIndex];
 }
-
-
-for (let index = 0; index < 100; index++) {
-  getRandomDigit([7, 1, 2, 0, 4]);
-}
