@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="one" onclick="writeClassOnPage(event)"></div>
+  <div class="two" onclick="writeClassOnPage(event)"></div>
+  <div class="three" onclick="writeClassOnPage(event)"></div>
+  <h1 id="classValue"></h1>
+  <script>
+    function writeClassOnPage(event) {
+      const className = event.target.classList[0];
+      const h1 = document.getElementById("classValue");
+      h1.innerHTML = className;
+    }
+  </script>
+</body>
+
+</html>
