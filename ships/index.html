@@ -12,21 +12,22 @@
 <body>
   <div class="board">
     <div class="row">
-      <div class="A1 cell icon ship" onclick="hit(event)"></div>
-      <div class="A2 cell" onclick="hit(event)"></div>
-      <div class="A3 cell" onclick="hit(event)"></div>
+      <div id="" class="A1 cell" onclick="hit(event)"></div>
+      <div id="" class="A2 cell" onclick="hit(event)"></div>
+      <div id="" class="A3 cell" onclick="hit(event)"></div>
     </div>
     <div class="row">
       <div class="B1 cell" onclick="hit(event)"></div>
       <div class="B2 cell" onclick="hit(event)"></div>
-      <div class="B3 cell icon ship" onclick="hit(event)"></div>
+      <div class="B3 cell" onclick="hit(event)"></div>
     </div>
     <div class="row">
-      <div class="C1 cell icon ship" onclick="hit(event)"></div>
+      <div class="C1 cell" onclick="hit(event)"></div>
       <div class="C2 cell" onclick="hit(event)"></div>
       <div class="C3 cell" onclick="hit(event)"></div>
     </div>
   </div>
+  <button onclick="fillBoardWithShips()">Get random set</button>
   <script src="script.js"></script>
 </body>
 
