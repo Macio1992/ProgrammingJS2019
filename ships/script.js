@@ -1,12 +1,29 @@
 let points = 0;
 const shipsAmount = 3;
+const chancesAmount = 5;
 const pointsCounterH1 = document.getElementById("pointsCounter");
+const movesCounterH1 = document.getElementById("movesCounter");
 pointsCounterH1.innerHTML = points;
 const gameStatusMessage = document.getElementById("gameStatusMessage");
+let moves = 0;
 
 function hit(event) {
+  if (points === shipsAmount) {
+    return;
+  }
+
+  if (moves >= chancesAmount) {
+    return;
+  }
+
   setHitShipClass(event);
+  countMoves();
   setGameStatus();
+}
+
+function countMoves() {
+  moves++;
+  movesCounterH1.innerHTML = moves;
 }
 
 function setHitShipClass(event) {
@@ -21,6 +38,12 @@ function setHitShipClass(event) {
 function setGameStatus() {
   if (points === shipsAmount) {
     gameStatusMessage.innerHTML = "Wygrana!";
+    return;
+  }
+
+  if (moves >= chancesAmount) {
+    gameStatusMessage.innerHTML = "Przegrana!";
+    return;
   }
 }
 
