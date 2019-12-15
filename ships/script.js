@@ -5,8 +5,8 @@ pointsCounterH1.innerHTML = points;
 const gameStatusMessage = document.getElementById("gameStatusMessage");
 
 function hit(event) {
-  setGameStatus();
   setHitShipClass(event);
+  setGameStatus();
 }
 
 function setHitShipClass(event) {
@@ -19,7 +19,7 @@ function setHitShipClass(event) {
 }
 
 function setGameStatus() {
-  if (points === shipsAmount - 1) {
+  if (points === shipsAmount) {
     gameStatusMessage.innerHTML = "Wygrana!";
   }
 }
@@ -41,12 +41,10 @@ function setShips() {
   const randomSetArray = getRandomSet();
 
   for (let index = 0; index < randomSetArray.length; index++) {
-    console.log(randomSetArray[index]);
     let cell = document.getElementById(randomSetArray[index]);
     cell.classList.add("ship");
   }
 }
-
 
 function fillBoardWithShips() {
   setShips();
