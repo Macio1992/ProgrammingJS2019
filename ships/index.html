@@ -12,21 +12,23 @@
 <body>
   <div class="board">
     <div class="row">
-      <div id="" class="A1 cell" onclick="hit(event)"></div>
-      <div id="" class="A2 cell" onclick="hit(event)"></div>
-      <div id="" class="A3 cell" onclick="hit(event)"></div>
+      <div id="A1" class="cell" onclick="hit(event)"></div>
+      <div id="A2" class="cell" onclick="hit(event)"></div>
+      <div id="A3" class="cell" onclick="hit(event)"></div>
     </div>
     <div class="row">
-      <div class="B1 cell" onclick="hit(event)"></div>
-      <div class="B2 cell" onclick="hit(event)"></div>
-      <div class="B3 cell" onclick="hit(event)"></div>
+      <div id="B1" class="cell" onclick="hit(event)"></div>
+      <div id="B2" class="cell" onclick="hit(event)"></div>
+      <div id="B3" class="cell" onclick="hit(event)"></div>
     </div>
     <div class="row">
-      <div class="C1 cell" onclick="hit(event)"></div>
-      <div class="C2 cell" onclick="hit(event)"></div>
-      <div class="C3 cell" onclick="hit(event)"></div>
+      <div id="C1" class="cell" onclick="hit(event)"></div>
+      <div id="C2" class="cell" onclick="hit(event)"></div>
+      <div id="C3" class="cell" onclick="hit(event)"></div>
     </div>
   </div>
+  <h1 id="pointsCounter"></h1>
+  <h1 id="gameStatusMessage"></h1>
   <button onclick="fillBoardWithShips()">Get random set</button>
   <script src="script.js"></script>
 </body>

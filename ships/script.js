@@ -1,8 +1,30 @@
-function hit(event) {
+let points = 0;
+const shipsAmount = 3;
+const pointsCounterH1 = document.getElementById("pointsCounter");
+pointsCounterH1.innerHTML = points;
+const gameStatusMessage = document.getElementById("gameStatusMessage");
 
+function hit(event) {
+  setGameStatus();
+  setHitShipClass(event);
 }
 
-function getRandomSets() {
+function setHitShipClass(event) {
+  if (event.target.classList.contains("ship")) {
+    points++;
+    pointsCounterH1.innerHTML = points;
+    event.target.classList.remove("ship");
+    event.target.classList.add("hitShip");
+  }
+}
+
+function setGameStatus() {
+  if (points === shipsAmount - 1) {
+    gameStatusMessage.innerHTML = "Wygrana!";
+  }
+}
+
+function getRandomSet() {
   let allowedSets = [
     ['A1', 'B3', 'C1'],
     ['A3', 'B1', 'C3'],
@@ -13,10 +35,19 @@ function getRandomSets() {
   return allowedSets[randomIndex];
 }
 
-function fillBoardWithShips() {
-  const randomSets = getRandomSets();
+const cells = document.getElementsByClassName("cell");
 
-  for (let i = 0; i < randomSets.length; i++) {
-    
+function setShips() {
+  const randomSetArray = getRandomSet();
+
+  for (let index = 0; index < randomSetArray.length; index++) {
+    console.log(randomSetArray[index]);
+    let cell = document.getElementById(randomSetArray[index]);
+    cell.classList.add("ship");
   }
+}
+
+
+function fillBoardWithShips() {
+  setShips();
 }

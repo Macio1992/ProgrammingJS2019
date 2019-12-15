@@ -26,12 +26,15 @@
 
 .hitShip {
   background-image: url("./img/icons8-cargo-ship-90red.png");
+  background-repeat: no-repeat;
 }
 
 .ship {
   background-image: url("./img/icons8-cargo-ship-90.png");
+  background-repeat: no-repeat;
 }
 
 .skull {
   background-image: url("./img/catrina.png");
+  background-repeat: no-repeat;
 }
