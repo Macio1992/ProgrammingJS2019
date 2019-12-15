@@ -72,5 +72,9 @@ function setShips() {
 
 function fillBoardWithShips() {
   setShips();
+  removeRandomSetButton();
+}
+
+function removeRandomSetButton() {
   getRandomSetButton.remove();
 }
