@@ -1,9 +1,7 @@
 let points = 0;
 const shipsAmount = 3;
 const chancesAmount = 5;
-const pointsCounterH1 = document.getElementById("pointsCounter");
 const movesCounterH1 = document.getElementById("movesCounter");
-pointsCounterH1.innerHTML = points;
 const gameStatusMessage = document.getElementById("gameStatusMessage");
 let moves = 0;
 const getRandomSetButton = document.getElementById("getRandomSetButton");
@@ -28,11 +26,13 @@ function countMoves() {
 }
 
 function setHitShipClass(event) {
+  event.target.classList.add("noclick");
   if (event.target.classList.contains("ship")) {
     points++;
-    pointsCounterH1.innerHTML = points;
     event.target.classList.remove("ship");
     event.target.classList.add("hitShip");
+  } else {
+    event.target.classList.add("skull");
   }
 }
 
