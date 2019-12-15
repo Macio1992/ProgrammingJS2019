@@ -6,6 +6,7 @@ const movesCounterH1 = document.getElementById("movesCounter");
 pointsCounterH1.innerHTML = points;
 const gameStatusMessage = document.getElementById("gameStatusMessage");
 let moves = 0;
+const getRandomSetButton = document.getElementById("getRandomSetButton");
 
 function hit(event) {
   if (points === shipsAmount) {
@@ -71,4 +72,9 @@ function setShips() {
 
 function fillBoardWithShips() {
   setShips();
+  removeRandomSetButton();
+}
+
+function removeRandomSetButton() {
+  getRandomSetButton.remove();
 }
