@@ -1,8 +1,8 @@
-let element = document.getElementById("jeden")
 
 function changeColor() {
-    element.classList.add("red")
-    let paragraf = document.getElementById("paragraf")
-    paragraf.innerHTML = 'squareClicked'
+    let element = document.getElementById('jeden');
+    element.classList.add('red');
+    let paragraf = document.getElementById('paragraph');
+    paragraf.innerHTML = 'squareClicked';
 }
 
