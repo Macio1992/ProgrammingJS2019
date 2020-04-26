@@ -10,3 +10,4 @@ function changeColor(id) {
     licznik.innerHTML = 'Kliknieto ' + counter;
     console.log('Kliknięto element o id ', id);
 };
+
