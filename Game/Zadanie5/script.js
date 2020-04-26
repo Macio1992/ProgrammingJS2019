@@ -1,6 +1,9 @@
 let chosenIds = [];
+const colors = ["red", "green", "blue"];
 
-function sendID(id) {
+function sendID(id, index) {
+    const element = document.getElementById(id);
     chosenIds.push(id);
-    console.log(chosenIds);
+    const color = colors[index-1];
+    element.classList.add(color);
 }
