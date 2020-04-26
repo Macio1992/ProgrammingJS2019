@@ -1,6 +1,6 @@
 let counter = 0
 
-function changeColor(id) {
+function changeColor() {
     let element = document.getElementById('jeden');
     element.classList.add('red');
     let paragraf = document.getElementById('paragraph');
@@ -8,5 +8,4 @@ function changeColor(id) {
     const licznik = document.getElementById('counter');
     counter++;
     licznik.innerHTML = 'Kliknieto ' + counter;
-    console.log('Kliknięto element o id ', id);
 };
