@@ -8,5 +8,5 @@ function changeColor(id) {
     const licznik = document.getElementById('counter');
     counter++;
     licznik.innerHTML = 'Kliknieto ' + counter;
-
+    console.log('Kliknięto element o id ', id);
 };
