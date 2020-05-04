@@ -1,5 +1,8 @@
 let chosenIds = [];
-const colors = ["red", "green", "blue"];
+const colors = [
+  "red", "green", "blue",
+  "green", "blue", "red",
+];
 
 function clickCell(id, index) {
   const element = document.getElementById(id);
