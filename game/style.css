@@ -1,0 +1,26 @@
+.cell {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.row {
+    display: flex;
+}
+
+.red {
+    background: red;
+}
+
+.green {
+    background: green;
+}
+
+.blue {
+    background: blue;
+}
+
+.game {
+    width: 600px;
+    margin: auto;
+}
