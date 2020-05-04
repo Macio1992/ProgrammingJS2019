@@ -31,6 +31,15 @@ function verifyColorsChoice() {
   if (clicks === 2) {
     if (chosenColors[0] === chosenColors[1]) {
       points++;
+
+      preventDivsFromClicking();
     }
+  }
+}
+
+function preventDivsFromClicking() {
+  for (let i = 0; i < chosenIds.length; i++) {
+    const element = document.getElementById(chosenIds[i]);
+    element.classList.add('no-events');
   }
 }
