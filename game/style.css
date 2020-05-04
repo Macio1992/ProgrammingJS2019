@@ -19,3 +19,8 @@
 .blue {
     background: blue;
 }
+
+.game {
+    width: 600px;
+    margin: auto;
+}
