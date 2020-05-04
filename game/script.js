@@ -32,9 +32,18 @@ function verifyColorsChoice() {
   if (clicks === 2) {
     if (chosenColors[0] === chosenColors[1]) {
       points++;
-      pointsParagraph.innerHTML = "Points: " + points;
-      chosenColors = [];
-      clicks = 0;
+      setPointsParagraphText();
+      resetGameVariables();
     }
   }
+}
+
+function setPointsParagraphText() {
+  pointsParagraph.innerHTML = "Points: " + points;
+}
+
+function resetGameVariables() {
+  chosenColors = [];
+  chosenIds = [];
+  clicks = 0;
 }
