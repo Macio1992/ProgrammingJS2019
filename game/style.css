@@ -2,6 +2,7 @@
     width: 200px;
     height: 200px;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 .row {
@@ -23,4 +24,8 @@
 .game {
     width: 600px;
     margin: auto;
+}
+
+.no-events {
+    pointer-events: none;
 }

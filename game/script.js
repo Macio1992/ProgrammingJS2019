@@ -34,6 +34,8 @@ function verifyColorsChoice() {
       points++;
       setPointsParagraphText();
       resetGameVariables();
+
+      preventDivsFromClicking();
     }
   }
 }
@@ -46,4 +48,10 @@ function resetGameVariables() {
   chosenColors = [];
   chosenIds = [];
   clicks = 0;
+}
+function preventDivsFromClicking() {
+  for (let i = 0; i < chosenIds.length; i++) {
+    const element = document.getElementById(chosenIds[i]);
+    element.classList.add('no-events');
+  }
 }
