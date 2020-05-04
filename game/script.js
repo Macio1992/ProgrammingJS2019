@@ -6,6 +6,7 @@ const colors = [
 let clicks = 0;
 let chosenColors = [];
 let points = 0;
+const pointsParagraph = document.getElementById("pointsParagraph");
 
 function clickCell(id, index) {
   const element = document.getElementById(id);
@@ -31,12 +32,23 @@ function verifyColorsChoice() {
   if (clicks === 2) {
     if (chosenColors[0] === chosenColors[1]) {
       points++;
+      setPointsParagraphText();
+      resetGameVariables();
 
       preventDivsFromClicking();
     }
   }
 }
 
+function setPointsParagraphText() {
+  pointsParagraph.innerHTML = "Points: " + points;
+}
+
+function resetGameVariables() {
+  chosenColors = [];
+  chosenIds = [];
+  clicks = 0;
+}
 function preventDivsFromClicking() {
   for (let i = 0; i < chosenIds.length; i++) {
     const element = document.getElementById(chosenIds[i]);
