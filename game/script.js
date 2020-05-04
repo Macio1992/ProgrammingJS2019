@@ -3,6 +3,9 @@ const colors = [
   "red", "green", "blue",
   "green", "blue", "red",
 ];
+let clicks = 0;
+let chosenColors = [];
+let points = 0;
 
 function clickCell(id, index) {
   const element = document.getElementById(id);
