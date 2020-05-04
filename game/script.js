@@ -6,6 +6,7 @@ const colors = [
 let clicks = 0;
 let chosenColors = [];
 let points = 0;
+const pointsParagraph = document.getElementById("pointsParagraph");
 
 function clickCell(id, index) {
   const element = document.getElementById(id);
@@ -31,6 +32,9 @@ function verifyColorsChoice() {
   if (clicks === 2) {
     if (chosenColors[0] === chosenColors[1]) {
       points++;
+      pointsParagraph.innerHTML = "Points: " + points;
+      chosenColors = [];
+      clicks = 0;
     }
   }
 }
