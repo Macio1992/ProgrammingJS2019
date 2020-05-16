@@ -57,3 +57,12 @@ body {
     top: 2rem;
     right: 2rem;
 }
+
+.pointsCounterAnimation {
+    animation: changeColor 3s ease-in-out;
+}
+
+@keyframes changeColor {
+    from { background-color: #ff7a0d; }
+    to { background-color: white; }
+}
