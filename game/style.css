@@ -1,7 +1,16 @@
+body {
+    background-color: #1f4076;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
 .cell {
     width: 200px;
     height: 200px;
-    border: 1px solid black;
+    border: 1px solid white;
     cursor: pointer;
 }
 
@@ -23,9 +32,16 @@
 
 .game {
     width: 600px;
-    margin: auto;
 }
 
 .no-events {
     pointer-events: none;
+}
+
+.question-mark {
+    background-image: url("./question_mark.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #ff7a0d;
 }

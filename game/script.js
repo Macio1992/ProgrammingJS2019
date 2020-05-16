@@ -15,6 +15,8 @@ function clickCell(id, index) {
       const secondDiv = document.getElementById(chosenIds[1]);
       firstDiv.classList.remove(chosenColors[0]);
       secondDiv.classList.remove(chosenColors[1]);
+      firstDiv.classList.add("question-mark");
+      secondDiv.classList.add("question-mark");
       resetGameVariables();
     }
   }
@@ -22,6 +24,7 @@ function clickCell(id, index) {
   addIdToChosenIds(id);
   addColorToChosenColors(index);
   const color = colors[index - 1];
+  element.classList.remove("question-mark");
   element.classList.add(color);
   clicks++;
 
