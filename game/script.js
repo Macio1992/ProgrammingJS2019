@@ -9,17 +9,7 @@ let points = 0;
 const pointsParagraph = document.getElementById("pointsParagraph");
 
 function clickCell(id, index) {
-  if (clicks === 0) {
-    if (chosenIds.length > 0) {
-      const firstDiv = document.getElementById(chosenIds[0]);
-      const secondDiv = document.getElementById(chosenIds[1]);
-      firstDiv.classList.remove(chosenColors[0]);
-      secondDiv.classList.remove(chosenColors[1]);
-      firstDiv.classList.add("question-mark");
-      secondDiv.classList.add("question-mark");
-      resetGameVariables();
-    }
-  }
+  verifyIfColorsChosenWrongly();
   const element = document.getElementById(id);
   addIdToChosenIds(id);
   addColorToChosenColors(index);
@@ -66,4 +56,22 @@ function preventDivsFromClicking() {
     const element = document.getElementById(chosenIds[i]);
     element.classList.add('no-events');
   }
+}
+
+function verifyIfColorsChosenWrongly() {
+  if (clicks === 0) {
+    if (chosenIds.length > 0) {
+      resetWronglyChosenColors();
+      resetGameVariables();
+    }
+  }
+}
+
+function resetWronglyChosenColors() {
+  const firstDiv = document.getElementById(chosenIds[0]);
+  const secondDiv = document.getElementById(chosenIds[1]);
+  firstDiv.classList.remove(chosenColors[0]);
+  secondDiv.classList.remove(chosenColors[1]);
+  firstDiv.classList.add("question-mark");
+  secondDiv.classList.add("question-mark");
 }
