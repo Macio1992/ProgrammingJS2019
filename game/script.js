@@ -8,6 +8,7 @@ let chosenColors = [];
 let points = 0;
 const pointsParagraph = document.getElementById("pointsParagraph");
 const resultParagraph = document.getElementById("resultParagraph");
+const resultParagraphContainer = document.getElementById("resultParagraphContainer");
 
 function clickCell(id, index) {
   verifyIfColorsChosenWrongly();
@@ -19,6 +20,10 @@ function clickCell(id, index) {
   element.classList.add(color);
   clicks++;
   verifyColorsChoice();
+  verifyWinning();
+}
+
+function verifyWinning() {
   if (points === 3) {
     resultParagraph.innerHTML = "Wygrana!";
     resultParagraph.classList.add("resultAnimation");
@@ -48,6 +53,7 @@ function verifyColorsChoice() {
 
 function setPointsParagraphText() {
   pointsParagraph.innerHTML = "Points: " + points;
+  pointsParagraphCon.classList.add("pointsCounterAnimation");
 }
 
 function resetGameVariables() {
@@ -63,9 +69,12 @@ function preventDivsFromClicking() {
 }
 
 function verifyIfColorsChosenWrongly() {
-  if (clicks === 0 && chosenIds.length > 0) {
-    resetWronglyChosenColors();
-    resetGameVariables();
+  if (clicks === 0) {
+
+    if (chosenIds.length > 0) {
+      resetWronglyChosenColors();
+      resetGameVariables();
+    }
   }
 }
 
