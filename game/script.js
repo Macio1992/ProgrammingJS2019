@@ -10,16 +10,12 @@ const pointsParagraph = document.getElementById("pointsParagraph");
 
 function clickCell(id, index) {
   if (clicks === 0) {
-    console.log("chosenIds", chosenIds)
-    console.log("chosenColors", chosenColors)
     if (chosenIds.length > 0) {
       const firstDiv = document.getElementById(chosenIds[0]);
       const secondDiv = document.getElementById(chosenIds[1]);
       firstDiv.classList.remove(chosenColors[0]);
       secondDiv.classList.remove(chosenColors[1]);
-      // resetGameVariables();
-      chosenColors = [];
-      chosenIds = [];
+      resetGameVariables();
     }
   }
   const element = document.getElementById(id);
@@ -47,9 +43,7 @@ function verifyColorsChoice() {
       points++;
       preventDivsFromClicking();
       setPointsParagraphText();
-      // resetGameVariables();
-      chosenColors = [];
-      chosenIds = [];    
+      resetGameVariables();
     }
     clicks = 0;
   }
@@ -62,7 +56,6 @@ function setPointsParagraphText() {
 function resetGameVariables() {
   chosenColors = [];
   chosenIds = [];
-  clicks = 0;
 }
 
 function preventDivsFromClicking() {
