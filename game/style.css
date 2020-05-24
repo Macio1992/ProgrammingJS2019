@@ -1,0 +1,84 @@
+body {
+    background-color: #1f4076;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.cell {
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+}
+
+.red {
+    background: red;
+}
+
+.green {
+    background: green;
+}
+
+.blue {
+    background: blue;
+}
+
+.game {
+    width: 600px;
+}
+
+.no-events {
+    pointer-events: none;
+}
+
+.question-mark {
+    background-image: url("./question_mark.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #ff7a0d;
+}
+
+.pointsCounter {
+    font-family: fantasy;
+    font-size: 2rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.pointsCounterAnimation {
+    animation: changeColor 3s ease-in-out;
+}
+
+@keyframes changeColor {
+    from { background-color: #ff7a0d; }
+    to { background-color: white; }
+}
+
+.result {
+    color: white;
+    font-size: 4rem;
+    font-family: fantasy;
+}
+
+.resultAnimation {
+    animation: changeColorResult 5s infinite;
+}
+
+@keyframes changeColorResult {
+    from { color: #1f4076; }
+    to { color: white; }
+}
