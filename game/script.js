@@ -53,7 +53,7 @@ function verifyColorsChoice() {
 
 function setPointsParagraphText() {
   pointsParagraph.innerHTML = "Points: " + points;
-  pointsParagraphCon.classList.add("pointsCounterAnimation");
+  pointsParagraphContainer.classList.add("pointsCounterAnimation");
 }
 
 function resetGameVariables() {
@@ -70,7 +70,7 @@ function preventDivsFromClicking() {
 
 function verifyIfColorsChosenWrongly() {
   if (clicks === 0) {
-
+    pointsParagraphContainer.classList.remove("pointsCounterAnimation");
     if (chosenIds.length > 0) {
       resetWronglyChosenColors();
       resetGameVariables();
