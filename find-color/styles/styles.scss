@@ -10,6 +10,7 @@ $blackColor: black;
 body, html {
     height: 100%;
     margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .main {
@@ -70,4 +71,31 @@ body, html {
 .yellow {
     background-color: $yellowColor;
     border: 3px solid $yellowColor;
+}
+
+.messages {
+    list-style-type: none;
+    margin-top: 4rem;
+    padding-left: 1.5rem;
+
+    .messages__item {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .messages__item--ordinary {
+        color: white;
+    }
+
+    .messages__item--win {
+        color: $blueColor;
+    }
+
+    .messages__item--lost {
+        color: $redColor;
+    }
+}
+
+.no-events {
+    pointer-events: none;
 }

@@ -12,7 +12,7 @@
     <section class="main">
         <div class="chances">
         </div>
-        <div class="game">
+        <div class="game" id="gameContainer">
             <div class="row">
                 <div class="cell question_mark" onclick="guessColor('cell_1',1)" id="cell_1"></div>
                 <div class="cell question_mark" onclick="guessColor('cell_2',2)" id="cell_2"></div>
@@ -20,6 +20,7 @@
                 <div class="cell question_mark" onclick="guessColor('cell_4',4)" id="cell_4"></div>
                 <div class="cell question_mark" onclick="guessColor('cell_5',5)" id="cell_5"></div>
             </div>
+            <ul class="messages" id="messagesUl"></ul>
         </div>
     </section>
     <script src="script.js"></script>
