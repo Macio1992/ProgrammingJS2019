@@ -1,0 +1,11 @@
+{
+  "name": "ProgrammingJS2019",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass styles/styles.scss styles/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Macio1992/ProgrammingJS2019.git"
+  }
+}
