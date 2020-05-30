@@ -99,3 +99,16 @@ body, html {
 .no-events {
     pointer-events: none;
 }
+
+.chances {
+    padding: 1rem;
+
+    .chances__text {
+        font-size: 1.5rem;
+
+        span {
+            font-weight: bold;
+            color: $gameColor;
+        }
+    }
+}
