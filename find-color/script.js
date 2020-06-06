@@ -7,7 +7,7 @@ const MESSAGES_ITEM_LOST = "messages__item--lost";
 const CHANCES_COUNT = 3;
 
 const colors = ['blue', 'red', 'green', 'black', 'yellow'];
-const colorToFind = colors[2];
+let colorToFind;
 let chancesCount = CHANCES_COUNT;
 let chosenIds = [];
 let chosenColors = [];
@@ -16,6 +16,7 @@ const ulElement = document.getElementById("messagesUl");
 const gameContainer = document.getElementById("gameContainer");
 const chancesParagraph = document.getElementById("chancesParagraph");
 
+getRandomColorToFind();
 addLiToUl(`Witaj w grze, szukasz koloru: ${colorToFind}`, MESSAGES_ITEM_ORDINARY);
 setChancesParagraphText();
 
@@ -60,7 +61,9 @@ function resetGame() {
     chancesCount = CHANCES_COUNT;
     setChancesParagraphText();
     clearUlElement();
+    getRandomColorToFind();
     addLiToUl("Zresetowałeś gre, zacznij od nowa", MESSAGES_ITEM_ORDINARY);
+    addLiToUl(`Witaj w grze, szukasz koloru: ${colorToFind}`, MESSAGES_ITEM_ORDINARY);
 
     clearChosenElementsColors();
 
@@ -68,6 +71,10 @@ function resetGame() {
     chosenColors = [];
 
     gameContainer.classList.contains(NO_EVENTS_CLASS) && gameContainer.classList.remove(NO_EVENTS_CLASS);
+}
+
+function getRandomColorToFind() {
+    colorToFind = colors[getRandomInt(0, colors.length)];
 }
 
 function clearUlElement() {
@@ -80,6 +87,12 @@ function clearChosenElementsColors() {
         clickedElement.classList.remove(chosenColors[i]);
         clickedElement.classList.add(QUESTION_MARK_CLASS);
     }
+}
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
 
