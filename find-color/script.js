@@ -20,6 +20,8 @@ function guessColor(elementId, index) {
     const clickedColor = colors[index - 1];
     clickedElement.classList.add(clickedColor);
     clickedElement.classList.remove(QUESTION_MARK_CLASS);
+    chancesCount--;
+    setChancesParagraphText();
 
     if (clickedColor === colorToFind) {
         addLiToUl("Wygrana!", MESSAGES_ITEM_WIN);
@@ -27,8 +29,12 @@ function guessColor(elementId, index) {
         return;
     }
 
-    chancesCount--;
-    setChancesParagraphText();
+    if (chancesCount === 0) {
+        addLiToUl("Wykorzystałeś wszystkie szanse. Przegrana", MESSAGES_ITEM_LOST);
+        gameContainer.classList.add("no-events");
+        return;
+    }
+
     addLiToUl(`Nie trafiłeś, spróbuj ponownie, szukaj koloru: ${colorToFind}`, MESSAGES_ITEM_ORDINARY);
 }
 
