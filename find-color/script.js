@@ -17,18 +17,19 @@ setChancesParagraphText();
 
 function guessColor(elementId, index) {
     const clickedElement = document.getElementById(elementId);
-    const clickedColor = colors[index-1];
+    const clickedColor = colors[index - 1];
     clickedElement.classList.add(clickedColor);
     clickedElement.classList.remove(QUESTION_MARK_CLASS);
 
     if (clickedColor === colorToFind) {
         addLiToUl("Wygrana!", MESSAGES_ITEM_WIN);
         gameContainer.classList.add("no-events");
-    } else {
-        chancesCount--;
-        setChancesParagraphText();
-        addLiToUl(`Nie trafiłeś, spróbuj ponownie, szukaj koloru: ${colorToFind}`, MESSAGES_ITEM_ORDINARY);
+        return;
     }
+
+    chancesCount--;
+    setChancesParagraphText();
+    addLiToUl(`Nie trafiłeś, spróbuj ponownie, szukaj koloru: ${colorToFind}`, MESSAGES_ITEM_ORDINARY);
 }
 
 function addLiToUl(liText, additionalClass) {
