@@ -4,10 +4,11 @@ const MESSAGES_ITEM = "messages__item";
 const MESSAGES_ITEM_ORDINARY = "messages__item--ordinary";
 const MESSAGES_ITEM_WIN = "messages__item--win";
 const MESSAGES_ITEM_LOST = "messages__item--lost";
+const CHANCES_COUNT = 3;
 
 const colors = ['blue', 'red', 'green', 'black', 'yellow'];
 const colorToFind = colors[2];
-let chancesCount = 3;
+let chancesCount = CHANCES_COUNT;
 let chosenIds = [];
 let chosenColors = [];
 
@@ -56,22 +57,28 @@ function setChancesParagraphText() {
 }
 
 function resetGame() {
-    chancesCount = 3;
+    chancesCount = CHANCES_COUNT;
     setChancesParagraphText();
-    ulElement.innerHTML = "";
+    clearUlElement();
     addLiToUl("Zresetowałeś gre, zacznij od nowa", MESSAGES_ITEM_ORDINARY);
 
-    for (let i = 0; i < chosenIds.length; i++) {
-        const clickedElement = document.getElementById(chosenIds[i]);
-        clickedElement.classList.remove(chosenColors[i]);
-        clickedElement.classList.add(QUESTION_MARK_CLASS);
-    }
+    clearChosenElementsColors();
 
     chosenIds = [];
     chosenColors = [];
 
-    if (gameContainer.classList.contains(NO_EVENTS_CLASS)) {
-        gameContainer.classList.remove(NO_EVENTS_CLASS);
+    gameContainer.classList.contains(NO_EVENTS_CLASS) && gameContainer.classList.remove(NO_EVENTS_CLASS);
+}
+
+function clearUlElement() {
+    ulElement.innerHTML = "";
+}
+
+function clearChosenElementsColors() {
+    for (let i = 0; i < chosenIds.length; i++) {
+        const clickedElement = document.getElementById(chosenIds[i]);
+        clickedElement.classList.remove(chosenColors[i]);
+        clickedElement.classList.add(QUESTION_MARK_CLASS);
     }
 }
 
