@@ -16,6 +16,7 @@ $cellSize: 50;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .row {
@@ -27,4 +28,8 @@ $cellSize: 50;
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: 50% 50%;
+}
+
+.no-events {
+    pointer-events: none;
 }
