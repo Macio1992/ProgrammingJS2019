@@ -7,6 +7,7 @@ const MESSAGES_ITEM_LOST = "messages__item--lost";
 const CHANCES_COUNT = 3;
 
 const colors = ['blue', 'red', 'green', 'black', 'yellow'];
+const polishColors = ['niebieskiego', 'czerwonego', 'zielonego', 'czarnego', 'żółtego'];
 let colorToFind;
 let chancesCount = CHANCES_COUNT;
 let chosenIds = [];
@@ -17,7 +18,7 @@ const gameContainer = document.getElementById("gameContainer");
 const chancesParagraph = document.getElementById("chancesParagraph");
 
 getRandomColorToFind();
-addLiToUl(`Witaj w grze, szukasz koloru: ${colorToFind}`, MESSAGES_ITEM_ORDINARY);
+addLiToUl(`Witaj w grze, szukasz koloru: ${getPolishColor(colorToFind)}`, MESSAGES_ITEM_ORDINARY);
 setChancesParagraphText();
 
 function guessColor(elementId, index) {
@@ -42,7 +43,7 @@ function guessColor(elementId, index) {
         return;
     }
 
-    addLiToUl(`Nie trafiłeś, spróbuj ponownie, szukaj koloru: ${colorToFind}`, MESSAGES_ITEM_ORDINARY);
+    addLiToUl(`Nie trafiłeś, spróbuj ponownie, szukaj koloru: ${getPolishColor(colorToFind)}`, MESSAGES_ITEM_ORDINARY);
 }
 
 function addLiToUl(liText, additionalClass) {
@@ -63,7 +64,7 @@ function resetGame() {
     clearUlElement();
     getRandomColorToFind();
     addLiToUl("Zresetowałeś gre, zacznij od nowa", MESSAGES_ITEM_ORDINARY);
-    addLiToUl(`Witaj w grze, szukasz koloru: ${colorToFind}`, MESSAGES_ITEM_ORDINARY);
+    addLiToUl(`Witaj w grze, szukasz koloru: ${getPolishColor(colorToFind)}`, MESSAGES_ITEM_ORDINARY);
 
     clearChosenElementsColors();
 
@@ -93,6 +94,11 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function getPolishColor(color) {
+    const colorIndex = colors.indexOf(color);
+    return polishColors[colorIndex];
 }
 
 
