@@ -3,6 +3,7 @@ const NO_EVENTS_CLASS = "no-events";
 const NUMBER_CLASS = "number";
 const HIDDEN_BOMB = "hidden-bomb";
 const HIDDEN_NUMBER = "hidden-number";
+const CELL_CLASS = "cell";
 
 let POINTS = 0;
 
@@ -44,6 +45,11 @@ function getNumberCellsCount() {
     return numberCellsCount;
 }
 
+function getCellsCount() {
+    const cellsCount = document.getElementsByClassName(CELL_CLASS).length;
+    return cellsCount;
+}
+
 function showAllBombs() {
     const bombs = document.getElementsByClassName(BOMB_CLASS);
 
@@ -51,3 +57,35 @@ function showAllBombs() {
         bombs[index].classList.remove(HIDDEN_BOMB);
     }
 }
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function setRandomBombs() {
+    const randomIndexes = [];
+
+}
+
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+  
+  const randomIndexes = [];
+  
+  for (let i = 0; i < 5; i++) {
+    let x; 
+    do {
+      x = getRandomInt(0, 16);
+      randomIndexes.push(x)
+      console.log("losuje")
+    } while (randomIndexes.indexOf(x) === -1);
+    
+  }
+  console.log(randomIndexes)
+  
