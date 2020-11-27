@@ -1,9 +1,5 @@
 function hasKey(obj, key) {
-	if (obj[key] !== undefined) {
-        return true;
-    } else {
-        return false;
-    }
+    return obj[key] !== undefined;
 }
 
-console.log(hasKey({ pot: 1, tot: 2, not: 3 }, "not"))
+console.log(hasKey({ pot: 1, tot: 2, not: 3 }, "yes"))
