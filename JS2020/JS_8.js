@@ -1,5 +1,4 @@
-
-let Numbers = {
+let numbers = {
     1: "circle",
     2: "semi-circle",
     3: "triangle",
@@ -13,7 +12,7 @@ let Numbers = {
 }
 
 function nSidedShape(n) {
-    return Numbers[n];
+    return numbers[n];
 }
 
 console.log(nSidedShape(3));
