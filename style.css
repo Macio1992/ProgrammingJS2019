@@ -1,0 +1,62 @@
+body {
+    font-family: 'Courier New';
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.children {
+    width: 40%;
+    height: 40%;
+}
+
+.info {
+    margin-bottom: 10px;
+}
+
+.funLearning {
+    background-color: #199ddd;
+    border-radius: 5px;
+}
+
+.guaranteedWork {
+    background-color: #3ec5d9;
+    border-radius: 5px;
+    width: 75%;
+}
+
+.resources {
+    background-color: #f0262f;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.library {
+    background-color: #f1c50e;
+    border-radius: 5px;
+    width: 25%;
+}
+
+.icon {
+    height: 50px;
+    float: right;
+    border-radius: 5px;
+}
+
+h2 {
+    display: inline-block;
+}
+
+.text {
+    color: white;
+    margin: 0;
+    padding: 15px;
+}
+
+.textB {
+    color: black;
+    margin: 0;
+    padding: 15px;
+}
