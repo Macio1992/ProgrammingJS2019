@@ -1,0 +1,14 @@
+.container {
+    width: 1720px;
+    height: 1079px;
+    background-image: url("tiger+in+water.jpg");
+    background-size: 100% 100%;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: right;
+    display: flex;
+}
