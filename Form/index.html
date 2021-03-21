@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Montserrat,Arial,Helvetica,sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .inputText, .inputEmail {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .inputSubmit {
+            padding: 10px 0;
+            background-color: black;
+            color: white;
+            border: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input class="inputText" type="text" placeholder="name">
+        <input class="inputEmail" type="email" placeholder="email">
+        <input class="inputSubmit" type="submit" value="join">
+        <div class="icons">
+            <img src="twitter.png" alt="">
+            <img src="pinterest.png" alt="">
+            <img src="facebook.png" alt="">
+            <img src="instagram.png" alt="">
+        </div>
+    </form>
+</body>
+</html>
